@@ -5,7 +5,7 @@ This is an icon theme that uses the icons from [`seti-ui`](https://github.com/je
 ## Previewing icons
 
 There is a [`./icons/preview.html`](./icons/preview.html) file that can be opened to see all of the icons included in the theme.
-To view this, it needs to be hosted by a web server. The easiest way is to open the file with the `Open with Live Server` command from the [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+To view this, it needs to be hosted by a web server. The easiest way is to open the file with the `Open with Live Server` command from the [Live Server extension](https://open-vsx.org/vscode/item?itemName=ritwickdey.LiveServer).
 
 
 ## Updating icons

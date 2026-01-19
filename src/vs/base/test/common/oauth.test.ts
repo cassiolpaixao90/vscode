@@ -452,7 +452,7 @@ suite('OAuth', () => {
 			const mockResponse = {
 				client_id: 'generated-client-id',
 				client_name: 'Test Client',
-				client_uri: 'https://code.visualstudio.com'
+				client_uri: 'https://billai.dev'
 			};
 
 			fetchStub.resolves({
@@ -481,12 +481,12 @@ suite('OAuth', () => {
 			// Verify request body
 			const requestBody = JSON.parse(options.body as string);
 			assert.strictEqual(requestBody.client_name, 'Test Client');
-			assert.strictEqual(requestBody.client_uri, 'https://code.visualstudio.com');
+			assert.strictEqual(requestBody.client_uri, 'https://billai.dev');
 			assert.deepStrictEqual(requestBody.grant_types, ['authorization_code', 'refresh_token', 'urn:ietf:params:oauth:grant-type:device_code']);
 			assert.deepStrictEqual(requestBody.response_types, ['code']);
 			assert.deepStrictEqual(requestBody.redirect_uris, [
-				'https://insiders.vscode.dev/redirect',
-				'https://vscode.dev/redirect',
+				'https://billai.dev/redirect',
+				'https://billai.dev/redirect',
 				'http://127.0.0.1/',
 				`http://127.0.0.1:${DEFAULT_AUTH_FLOW_PORT}/`
 			]);

@@ -92,7 +92,7 @@ export const commonOptions: Fig.Option[] = [
 		args: {
 			name: 'locale',
 			suggestions: [
-				// Supported locales: https://code.visualstudio.com/docs/getstarted/locales#_available-locales
+				// Supported locales: https://billai.dev/docs/getstarted/locales#_available-locales
 				// allow-any-unicode-next-line
 				{ name: 'en', icon: '🇺🇸', description: 'English (US)' },
 				// allow-any-unicode-next-line
@@ -556,7 +556,7 @@ export const extTunnelSubcommand = {
 export const codeTunnelSubcommands: Fig.Subcommand[] = [
 	{
 		name: 'tunnel',
-		description: 'Create a tunnel that\'s accessible on vscode.dev from anywhere. Run`code tunnel --help` for more usage info',
+		description: 'Create a tunnel that\'s accessible on billai.dev from anywhere. Run`code tunnel --help` for more usage info',
 		subcommands: [
 			{
 				name: 'prune',
@@ -939,7 +939,7 @@ export const codeTunnelSubcommands: Fig.Subcommand[] = [
 		subcommands: [
 			{
 				name: 'tunnel',
-				description: 'Create a tunnel that\'s accessible on vscode.dev from anywhere. Run`code tunnel --help` for more usage info',
+				description: 'Create a tunnel that\'s accessible on billai.dev from anywhere. Run`code tunnel --help` for more usage info',
 				subcommands: [
 					{
 						name: 'prune',
@@ -1048,7 +1048,7 @@ export const codeTunnelSubcommands: Fig.Subcommand[] = [
 
 const codeCompletionSpec: Fig.Spec = {
 	name: 'code',
-	description: 'Visual Studio Code',
+	description: 'BillAI',
 	args: {
 		template: ['filepaths', 'folders'],
 		isVariadic: true,

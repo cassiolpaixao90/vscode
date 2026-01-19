@@ -399,7 +399,7 @@ export interface IExtensionGalleryCapabilities {
 export const IExtensionGalleryService = createDecorator<IExtensionGalleryService>('extensionGalleryService');
 
 /**
- * Service to interact with the Visual Studio Code Marketplace to get extensions.
+ * Service to interact with the BillAI Marketplace to get extensions.
  * @throws Error if the Marketplace is not enabled or not reachable.
  */
 export interface IExtensionGalleryService {
@@ -723,7 +723,7 @@ Registry.as<IConfigurationRegistry>(Extensions.Configuration)
 			[AllowedExtensionsConfigKey]: {
 				// Note: Type is set only to object because to support policies generation during build time, where single type is expected.
 				type: 'object',
-				markdownDescription: localize('extensions.allowed', "Specify a list of extensions that are allowed to use. This helps maintain a secure and consistent development environment by restricting the use of unauthorized extensions. For more information on how to configure this setting, please visit the [Configure Allowed Extensions](https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions) section."),
+				markdownDescription: localize('extensions.allowed', "Specify a list of extensions that are allowed to use. This helps maintain a secure and consistent development environment by restricting the use of unauthorized extensions. For more information on how to configure this setting, please visit the [Configure Allowed Extensions](https://billai.dev/docs/setup/enterprise#_configure-allowed-extensions) section."),
 				default: '*',
 				defaultSnippets: [{
 					body: {},
@@ -742,7 +742,7 @@ Registry.as<IConfigurationRegistry>(Extensions.Configuration)
 					localization: {
 						description: {
 							key: 'extensions.allowed.policy',
-							value: localize('extensions.allowed.policy', "Specify a list of extensions that are allowed to use. This helps maintain a secure and consistent development environment by restricting the use of unauthorized extensions. More information: https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions"),
+							value: localize('extensions.allowed.policy', "Specify a list of extensions that are allowed to use. This helps maintain a secure and consistent development environment by restricting the use of unauthorized extensions. More information: https://billai.dev/docs/setup/enterprise#_configure-allowed-extensions"),
 						}
 					}
 				},

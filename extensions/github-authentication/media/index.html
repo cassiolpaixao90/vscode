@@ -48,7 +48,7 @@
 			document.querySelector('body').classList.add('error');
 		} else if (redirectUri) {
 			// Wrap the redirect URI so that the browser remembers who triggered the redirect
-			const wrappedRedirectUri = `https://vscode.dev/redirect?url=${encodeURIComponent(redirectUri)}`;
+			const wrappedRedirectUri = `https://billai.dev/redirect?url=${encodeURIComponent(redirectUri)}`;
 			// Set up the fallback link
 			const fallbackLink = document.getElementById('fallback-link');
 			if (fallbackLink) {

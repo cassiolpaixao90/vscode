@@ -11,7 +11,7 @@ import { UriEventHandler } from '../UriEventHandler';
 import { loopbackTemplate } from './loopbackTemplate';
 import { Config } from '../common/config';
 
-const DEFAULT_REDIRECT_URI = 'https://vscode.dev/redirect';
+const DEFAULT_REDIRECT_URI = 'https://billai.dev/redirect';
 
 export const enum ExtensionHost {
 	Remote,

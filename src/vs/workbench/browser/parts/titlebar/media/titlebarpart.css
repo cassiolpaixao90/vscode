@@ -198,6 +198,90 @@
 	text-overflow: ellipsis;
 }
 
+/* IntelliJ-style command center */
+.monaco-workbench .part.titlebar > .titlebar-container > .titlebar-center > .window-title > .intellij-command-center {
+	-webkit-app-region: no-drag;
+}
+
+.monaco-workbench .intellij-command-center {
+	display: flex;
+	align-items: center;
+	-webkit-app-region: no-drag;
+}
+
+.monaco-workbench .part.titlebar > .titlebar-container > .titlebar-right > .intellij-command-center {
+	margin-right: 8px;
+}
+
+.monaco-workbench .intellij-command-center .intellij-command-center-toolbar {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	height: 24px;
+	padding: 0 6px;
+	border-radius: 6px;
+	background-color: var(--vscode-commandCenter-background);
+	border: none;
+	color: var(--vscode-commandCenter-foreground);
+	-webkit-app-region: no-drag;
+}
+
+.monaco-workbench .part.titlebar.inactive .intellij-command-center .intellij-command-center-toolbar {
+	background-color: var(--vscode-commandCenter-inactiveBackground);
+	border: none;
+	color: var(--vscode-commandCenter-inactiveForeground);
+}
+
+.monaco-workbench .intellij-command-center .monaco-toolbar .action-item .action-label {
+	color: inherit;
+}
+
+.monaco-workbench .intellij-command-center .monaco-toolbar .action-item .action-label.codicon {
+	font-size: 16px;
+}
+
+.monaco-workbench .intellij-command-center .start-debug-action-item {
+	display: flex;
+	align-items: center;
+	border: none;
+	background: transparent;
+	padding: 0;
+	-webkit-app-region: no-drag;
+}
+
+.monaco-workbench .intellij-command-center .start-debug-action-item .codicon-debug-start {
+	display: none;
+}
+
+.monaco-workbench .intellij-command-center .start-debug-action-item .configuration {
+	margin: 0;
+	padding: 0;
+}
+
+.monaco-workbench .intellij-command-center .start-debug-action-item .configuration .monaco-select-box {
+	border: none;
+	background: transparent;
+	color: inherit;
+	padding: 0 10px 0 0;
+	min-width: 140px;
+	max-width: 260px;
+	height: 22px;
+	-webkit-app-region: no-drag;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.monaco-workbench .intellij-command-center .start-debug-action-item,
+.monaco-workbench .intellij-command-center .start-debug-action-item .configuration,
+.monaco-workbench .intellij-command-center .start-debug-action-item .configuration .monaco-select-box,
+.monaco-workbench .intellij-command-center .start-debug-action-item .codicon,
+.monaco-workbench .intellij-command-center .monaco-toolbar .action-item,
+.monaco-workbench .intellij-command-center .monaco-toolbar .action-item .action-label {
+	border: none !important;
+	-webkit-app-region: no-drag;
+}
+
 .monaco-workbench .part.titlebar > .titlebar-container > .titlebar-center > .window-title > .command-center .action-item.command-center-center.multiple {
 	justify-content: flex-start;
 	padding: 0 12px;

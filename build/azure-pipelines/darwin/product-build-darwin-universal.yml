@@ -12,7 +12,7 @@ jobs:
           artifactName: vscode_client_darwin_$(VSCODE_ARCH)_archive
           displayName: Publish client archive
           sbomBuildDropPath: $(Build.ArtifactStagingDirectory)/VSCode-darwin-$(VSCODE_ARCH)
-          sbomPackageName: "VS Code macOS $(VSCODE_ARCH)"
+          sbomPackageName: "BillAI macOS $(VSCODE_ARCH)"
           sbomPackageVersion: $(Build.SourceVersion)
     steps:
       - template: ../common/checkout.yml@self

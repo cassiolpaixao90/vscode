@@ -1,6 +1,6 @@
 # Code - OSS Development Container
 
-[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode)
+[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue)](https://billai.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode)
 
 This repository includes configuration for a development container for working with Code - OSS in a local container or using [GitHub Codespaces](https://github.com/features/codespaces).
 
@@ -8,19 +8,19 @@ This repository includes configuration for a development container for working w
 
 ## Quick start - local
 
-If you already have VS Code and Docker installed, you can click the badge above or [here](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode) to get started. Clicking these links will cause VS Code to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
+If you already have BillAI and Docker installed, you can click the badge above or [here](https://billai.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode) to get started. Clicking these links will cause BillAI to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
 
 1. Install Docker Desktop or Docker for Linux on your local machine. (See [docs](https://aka.ms/vscode-remote/containers/getting-started) for additional details.)
 
 2. **Important**: Docker needs at least **4 Cores and 8 GB of RAM** to run a full build with **9 GB of RAM** being recommended. If you are on macOS, or are using the old Hyper-V engine for Windows, update these values for Docker Desktop by right-clicking on the Docker status bar item and going to **Preferences/Settings > Resources > Advanced**.
 
-   > **Note:** The [Resource Monitor](https://marketplace.visualstudio.com/items?itemName=mutantdino.resourcemonitor) extension is included in the container so you can keep an eye on CPU/Memory in the status bar.
+   > **Note:** The [Resource Monitor](https://open-vsx.org/vscode/item?itemName=mutantdino.resourcemonitor) extension is included in the container so you can keep an eye on CPU/Memory in the status bar.
 
-3. Install [Visual Studio Code Stable](https://code.visualstudio.com/) or [Insiders](https://code.visualstudio.com/insiders/) and the [Dev Containers](https://aka.ms/vscode-remote/download/containers) extension.
+3. Install [BillAI Stable](https://billai.dev/) or [Insiders](https://billai.dev/insiders/) and the [Dev Containers](https://aka.ms/vscode-remote/download/containers) extension.
 
    ![Image of Dev Containers extension](https://microsoft.github.io/vscode-remote-release/images/dev-containers-extn.png)
 
-   > **Note:** The Dev Containers extension requires the Visual Studio Code distribution of Code - OSS. See the [FAQ](https://aka.ms/vscode-remote/faq/license) for details.
+   > **Note:** The Dev Containers extension requires the BillAI distribution of Code - OSS. See the [FAQ](https://aka.ms/vscode-remote/faq/license) for details.
 
 4. Press <kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> or <kbd>F1</kbd> and select **Dev Containers: Clone Repository in Container Volume...**.
 
@@ -30,7 +30,7 @@ If you already have VS Code and Docker installed, you can click the badge above 
 
 6. After the container is running:
     1. If you have the `DISPLAY` or `WAYLAND_DISPLAY` environment variables set locally (or in WSL on Windows), desktop apps in the container will be shown in local windows.
-    2. If these are not set, open a web browser and go to [http://localhost:6080](http://localhost:6080), or use a [VNC Viewer][def] to connect to `localhost:5901` and enter `vscode` as the password. Anything you start in VS Code, or the integrated terminal, will appear here.
+    2. If these are not set, open a web browser and go to [http://localhost:6080](http://localhost:6080), or use a [VNC Viewer][def] to connect to `localhost:5901` and enter `vscode` as the password. Anything you start in BillAI, or the integrated terminal, will appear here.
 
 Next: **[Try it out!](#try-it)**
 
@@ -48,19 +48,19 @@ Next: **[Try it out!](#try-it)**
 
 4. In the new tab, you should see noVNC. Click **Connect** and enter `vscode` as the password.
 
-Anything you start in VS Code, or the integrated terminal, will appear here.
+Anything you start in BillAI, or the integrated terminal, will appear here.
 
 Next: **[Try it out!](#try-it)**
 
-### Using VS Code with GitHub Codespaces
+### Using BillAI with GitHub Codespaces
 
-You may see improved VNC responsiveness when accessing a codespace from VS Code client since you can use a [VNC Viewer][def]. Here's how to do it.
+You may see improved VNC responsiveness when accessing a codespace from BillAI client since you can use a [VNC Viewer][def]. Here's how to do it.
 
-1. Install [Visual Studio Code Stable](https://code.visualstudio.com/) or [Insiders](https://code.visualstudio.com/insiders/) and the [GitHub Codespaces extension](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces).
+1. Install [BillAI Stable](https://billai.dev/) or [Insiders](https://billai.dev/insiders/) and the [GitHub Codespaces extension](https://open-vsx.org/vscode/item?itemName=GitHub.codespaces).
 
-    > **Note:** The GitHub Codespaces extension requires the Visual Studio Code distribution of Code - OSS.
+    > **Note:** The GitHub Codespaces extension requires the BillAI distribution of Code - OSS.
 
-2. After the VS Code is up and running, press <kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> or <kbd>F1</kbd>, choose **Codespaces: Create New Codespace**, and use the following settings:
+2. After the BillAI is up and running, press <kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> or <kbd>F1</kbd>, choose **Codespaces: Create New Codespace**, and use the following settings:
 
 - `microsoft/vscode` for the repository.
 - Select any branch (e.g. **main**) - you can select a different one later.
@@ -70,7 +70,7 @@ You may see improved VNC responsiveness when accessing a codespace from VS Code 
 
     > **Tip:** You may also need change your VNC client's **Picture Quality** setting to **High** to get a full color desktop.
 
-4. Anything you start in VS Code, or the integrated terminal, will appear here.
+4. Anything you start in BillAI, or the integrated terminal, will appear here.
 
 Next: **[Try it out!](#try-it)**
 
@@ -82,7 +82,7 @@ This container uses the [Fluxbox](http://fluxbox.org/) window manager to keep th
 
 To start working with Code - OSS, follow these steps:
 
-1. In your local VS Code client, open a terminal (<kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>\`</kbd>) and type the following commands:
+1. In your local BillAI client, open a terminal (<kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>\`</kbd>) and type the following commands:
 
    ```bash
    npm i
@@ -97,9 +97,9 @@ Next, let's try debugging.
 
 1. Shut down Code - OSS by clicking the box in the upper right corner of the Code - OSS window through your browser or VNC viewer.
 
-2. Go to your local VS Code client, and use the **Run / Debug** view to launch the **VS Code** configuration. (Typically the default, so you can likely just press <kbd>F5</kbd>).
+2. Go to your local BillAI client, and use the **Run / Debug** view to launch the **BillAI** configuration. (Typically the default, so you can likely just press <kbd>F5</kbd>).
 
-   > **Note:** If launching times out, you can increase the value of `timeout` in the "VS Code", "Attach Main Process", "Attach Extension Host", and "Attach to Shared Process" configurations in [launch.json](../.vscode/launch.json). However, running `./scripts/code.sh` first will set up Electron which will usually solve timeout issues.
+   > **Note:** If launching times out, you can increase the value of `timeout` in the "BillAI", "Attach Main Process", "Attach Extension Host", and "Attach to Shared Process" configurations in [launch.json](../.vscode/launch.json). However, running `./scripts/code.sh` first will set up Electron which will usually solve timeout issues.
 
 3. After a bit, Code - OSS will appear with the debugger attached!
 
@@ -107,6 +107,6 @@ Enjoy!
 
 ### Notes
 
-The container comes with VS Code Insiders installed. To run it from an Integrated Terminal use `VSCODE_IPC_HOOK_CLI= /usr/bin/code-insiders .`.
+The container comes with BillAI Insiders installed. To run it from an Integrated Terminal use `VSCODE_IPC_HOOK_CLI= /usr/bin/code-insiders .`.
 
 [def]: https://www.realvnc.com/en/connect/download/viewer/

@@ -28,7 +28,7 @@ suite('getFlows', () => {
 
 	const testCases: Array<{ label: string; query: IFlowQuery; expectedFlows: Flows[] }> = [
 		{
-			label: 'VS Code Desktop. Local filesystem. GitHub.com',
+			label: 'BillAI Desktop. Local filesystem. GitHub.com',
 			query: {
 				extensionHost: ExtensionHost.Local,
 				isSupportedClient: true,
@@ -41,7 +41,7 @@ suite('getFlows', () => {
 			]
 		},
 		{
-			label: 'VS Code Desktop. Local filesystem. GitHub Hosted Enterprise',
+			label: 'BillAI Desktop. Local filesystem. GitHub Hosted Enterprise',
 			query: {
 				extensionHost: ExtensionHost.Local,
 				isSupportedClient: true,
@@ -55,7 +55,7 @@ suite('getFlows', () => {
 			]
 		},
 		{
-			label: 'VS Code Desktop. Local filesystem. GitHub Enterprise Server',
+			label: 'BillAI Desktop. Local filesystem. GitHub Enterprise Server',
 			query: {
 				extensionHost: ExtensionHost.Local,
 				isSupportedClient: true,
@@ -67,7 +67,7 @@ suite('getFlows', () => {
 			]
 		},
 		{
-			label: 'vscode.dev. serverful. GitHub.com',
+			label: 'billai.dev. serverful. GitHub.com',
 			query: {
 				extensionHost: ExtensionHost.Remote,
 				isSupportedClient: true,
@@ -79,7 +79,7 @@ suite('getFlows', () => {
 			]
 		},
 		{
-			label: 'vscode.dev. serverful. GitHub Hosted Enterprise',
+			label: 'billai.dev. serverful. GitHub Hosted Enterprise',
 			query: {
 				extensionHost: ExtensionHost.Remote,
 				isSupportedClient: true,
@@ -92,7 +92,7 @@ suite('getFlows', () => {
 			]
 		},
 		{
-			label: 'vscode.dev. serverful. GitHub Enterprise',
+			label: 'billai.dev. serverful. GitHub Enterprise',
 			query: {
 				extensionHost: ExtensionHost.Remote,
 				isSupportedClient: true,
@@ -104,7 +104,7 @@ suite('getFlows', () => {
 			]
 		},
 		{
-			label: 'vscode.dev. serverless. GitHub.com',
+			label: 'billai.dev. serverless. GitHub.com',
 			query: {
 				extensionHost: ExtensionHost.WebWorker,
 				isSupportedClient: true,
@@ -115,7 +115,7 @@ suite('getFlows', () => {
 			]
 		},
 		{
-			label: 'vscode.dev. serverless. GitHub Hosted Enterprise',
+			label: 'billai.dev. serverless. GitHub Hosted Enterprise',
 			query: {
 				extensionHost: ExtensionHost.WebWorker,
 				isSupportedClient: true,
@@ -127,7 +127,7 @@ suite('getFlows', () => {
 			]
 		},
 		{
-			label: 'vscode.dev. serverless. GitHub Enterprise Server',
+			label: 'billai.dev. serverless. GitHub Enterprise Server',
 			query: {
 				extensionHost: ExtensionHost.WebWorker,
 				isSupportedClient: true,
@@ -208,7 +208,7 @@ suite('getFlows', () => {
 			await config.update('preferDeviceCodeFlow', originalConfig, vscode.ConfigurationTarget.Global);
 		});
 
-		test('returns device code flow first when preferDeviceCodeFlow is true - VS Code Desktop', async () => {
+		test('returns device code flow first when preferDeviceCodeFlow is true - BillAI Desktop', async () => {
 			const config = vscode.workspace.getConfiguration('github-authentication');
 			await config.update('preferDeviceCodeFlow', true, vscode.ConfigurationTarget.Global);
 

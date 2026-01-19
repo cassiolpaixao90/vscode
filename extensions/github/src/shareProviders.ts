@@ -10,7 +10,7 @@ import { encodeURIComponentExceptSlashes, ensurePublished, getRepositoryForFile,
 
 export class VscodeDevShareProvider implements vscode.ShareProvider, vscode.Disposable {
 	readonly id: string = 'copyVscodeDevLink';
-	readonly label: string = vscode.l10n.t('Copy vscode.dev Link');
+	readonly label: string = vscode.l10n.t('Copy billai.dev Link');
 	readonly priority: number = 10;
 
 
@@ -97,7 +97,7 @@ export class VscodeDevShareProvider implements vscode.ShareProvider, vscode.Disp
 	}
 
 	private getVscodeDevHost(): string {
-		return `https://${vscode.env.appName.toLowerCase().includes('insiders') ? 'insiders.' : ''}vscode.dev/github`;
+		return `https://${vscode.env.appName.toLowerCase().includes('insiders') ? 'insiders.' : ''}billai.dev/github`;
 	}
 }
 

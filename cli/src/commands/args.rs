@@ -164,7 +164,7 @@ pub struct StandaloneUpdateArgs {
 #[derive(Subcommand, Debug, Clone)]
 
 pub enum Commands {
-	/// Create a tunnel that's accessible on vscode.dev from anywhere.
+	/// Create a tunnel that's accessible on billai.dev from anywhere.
 	/// Run `code tunnel --help` for more usage info.
 	Tunnel(TunnelArgs),
 
@@ -178,7 +178,7 @@ pub enum Commands {
 	/// Changes the version of the editor you're using.
 	Version(VersionArgs),
 
-	/// Runs a local web version of VS Code.
+	/// Runs a local web version of BillAI.
 	#[clap(about = concatcp!("Runs a local web version of ", constants::PRODUCT_NAME_LONG))]
 	ServeWeb(ServeWebArgs),
 

@@ -861,14 +861,14 @@ export async function fetchDynamicRegistration(serverMetadata: IAuthorizationSer
 
 	const requestBody: IAuthorizationDynamicClientRegistrationRequest = {
 		client_name: clientName,
-		client_uri: 'https://code.visualstudio.com',
+		client_uri: 'https://billai.dev',
 		grant_types: serverMetadata.grant_types_supported
 			? serverMetadata.grant_types_supported.filter(gt => grantTypesSupported.includes(gt))
 			: grantTypesSupported,
 		response_types: ['code'],
 		redirect_uris: [
-			'https://insiders.vscode.dev/redirect',
-			'https://vscode.dev/redirect',
+			'https://billai.dev/redirect',
+			'https://billai.dev/redirect',
 			'http://127.0.0.1/',
 			// Added these for any server that might do
 			// only exact match on the redirect URI even

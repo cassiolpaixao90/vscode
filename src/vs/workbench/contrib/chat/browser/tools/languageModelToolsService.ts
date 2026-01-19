@@ -66,12 +66,12 @@ export const globalAutoApproveDescription = localize2(
 		key: 'autoApprove2.markdown',
 		comment: [
 			'{Locked=\'](https://github.com/features/codespaces)\'}',
-			'{Locked=\'](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)\'}',
-			'{Locked=\'](https://code.visualstudio.com/docs/copilot/security)\'}',
+			'{Locked=\'](https://open-vsx.org/vscode/item?itemName=ms-vscode-remote.remote-containers)\'}',
+			'{Locked=\'](https://billai.dev/docs/copilot/security)\'}',
 			'{Locked=\'**\'}',
 		]
 	},
-	'Global auto approve also known as "YOLO mode" disables manual approval completely for _all tools in all workspaces_, allowing the agent to act fully autonomously. This is extremely dangerous and is *never* recommended, even containerized environments like [Codespaces](https://github.com/features/codespaces) and [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) have user keys forwarded into the container that could be compromised.\n\n**This feature disables [critical security protections](https://code.visualstudio.com/docs/copilot/security) and makes it much easier for an attacker to compromise the machine.**'
+	'Global auto approve also known as "YOLO mode" disables manual approval completely for _all tools in all workspaces_, allowing the agent to act fully autonomously. This is extremely dangerous and is *never* recommended, even containerized environments like [Codespaces](https://github.com/features/codespaces) and [Dev Containers](https://open-vsx.org/vscode/item?itemName=ms-vscode-remote.remote-containers) have user keys forwarded into the container that could be compromised.\n\n**This feature disables [critical security protections](https://billai.dev/docs/copilot/security) and makes it much easier for an attacker to compromise the machine.**'
 );
 
 export class LanguageModelToolsService extends Disposable implements ILanguageModelToolsService {
@@ -140,14 +140,14 @@ export class LanguageModelToolsService extends Disposable implements ILanguageMo
 
 		this._ctxToolsCount = ChatContextKeys.Tools.toolsCount.bindTo(_contextKeyService);
 
-		// Create the internal VS Code tool set
+		// Create the internal BillAI tool set
 		this.vscodeToolSet = this._register(this.createToolSet(
 			ToolDataSource.Internal,
 			'vscode',
 			VSCodeToolReference.vscode,
 			{
 				icon: ThemeIcon.fromId(Codicon.vscode.id),
-				description: localize('copilot.toolSet.vscode.description', 'Use VS Code features'),
+				description: localize('copilot.toolSet.vscode.description', 'Use BillAI features'),
 			}
 		));
 

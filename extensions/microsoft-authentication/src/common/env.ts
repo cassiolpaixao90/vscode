@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 import { Uri } from 'vscode';
 
-export const DEFAULT_REDIRECT_URI = 'https://vscode.dev/redirect';
+export const DEFAULT_REDIRECT_URI = 'https://billai.dev/redirect';
 
 const VALID_DESKTOP_CALLBACK_SCHEMES = [
 	'vscode',
@@ -20,7 +20,7 @@ const VALID_DESKTOP_CALLBACK_SCHEMES = [
 export function isSupportedClient(uri: Uri): boolean {
 	return (
 		VALID_DESKTOP_CALLBACK_SCHEMES.includes(uri.scheme) ||
-		// vscode.dev & insiders.vscode.dev
+		// billai.dev & insiders.billai.dev
 		/(?:^|\.)vscode\.dev$/.test(uri.authority) ||
 		// github.dev & codespaces
 		/(?:^|\.)github\.dev$/.test(uri.authority) ||

@@ -15,8 +15,8 @@ import { CANCELLATION_ERROR, NETWORK_ERROR, USER_CANCELLATION_ERROR } from './co
 import { Config } from './config';
 import { base64Encode } from './node/buffer';
 
-const REDIRECT_URL_STABLE = 'https://vscode.dev/redirect';
-const REDIRECT_URL_INSIDERS = 'https://insiders.vscode.dev/redirect';
+const REDIRECT_URL_STABLE = 'https://billai.dev/redirect';
+const REDIRECT_URL_INSIDERS = 'https://billai.dev/redirect';
 
 export interface IGitHubServer {
 	login(scopes: string, signInProvider?: GitHubSocialSignInProvider, extraAuthorizeParameters?: Record<string, string>, existingLogin?: string): Promise<string>;
@@ -58,20 +58,20 @@ export class GitHubServer implements IGitHubServer {
 		}
 		if (this._type === AuthProviderType.github) {
 			const proxyEndpoints = await vscode.commands.executeCommand<{ [providerId: string]: string } | undefined>('workbench.getCodeExchangeProxyEndpoints');
-			// If we are running in insiders vscode.dev, then ensure we use the redirect route on that.
+			// If we are running in insiders billai.dev, then ensure we use the redirect route on that.
 			this._redirectEndpoint = REDIRECT_URL_STABLE;
-			if (proxyEndpoints?.github && new URL(proxyEndpoints.github).hostname === 'insiders.vscode.dev') {
+			if (proxyEndpoints?.github && new URL(proxyEndpoints.github).hostname === 'insiders.billai.dev') {
 				this._redirectEndpoint = REDIRECT_URL_INSIDERS;
 			}
 		} else {
 			// GHE only supports a single redirect endpoint, so we can't use
-			// insiders.vscode.dev/redirect when we're running in Insiders, unfortunately.
+			// insiders.billai.dev/redirect when we're running in Insiders, unfortunately.
 			// Additionally, we make the assumption that this function will only be used
 			// in flows that target supported GHE targets, not on-prem GHES. Because of this
 			// assumption, we can assume that the GHE version used is at least 3.8 which is
 			// the version that changed the redirect endpoint to this URI from the old
 			// GitHub maintained server.
-			this._redirectEndpoint = 'https://vscode.dev/redirect';
+			this._redirectEndpoint = 'https://billai.dev/redirect';
 		}
 		return this._redirectEndpoint;
 	}

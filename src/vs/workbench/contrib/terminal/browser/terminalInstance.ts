@@ -1735,7 +1735,7 @@ export class TerminalInstance extends Disposable implements ITerminalInstance {
 				commandId: TerminalCommandId.ShellIntegrationLearnMore,
 				label: nls.localize('shellIntegration.learnMore', "Learn more about shell integration"),
 				run: () => {
-					this._openerService.open('https://code.visualstudio.com/docs/editor/integrated-terminal#_shell-integration');
+					this._openerService.open('https://billai.dev/docs/editor/integrated-terminal#_shell-integration');
 				}
 			}, {
 				commandId: 'workbench.action.openSettings',
@@ -2658,7 +2658,7 @@ export class TerminalLabelComputer extends Disposable {
 			shellCommand: commandDetection?.executingCommand && commandDetection.executingCommandConfidence === 'high' && promptInputModel
 				? promptInputModel.value + nonTaskSpinner
 				: undefined,
-			// Shell prompt input does not require high confidence as it's largely for VS Code developers
+			// Shell prompt input does not require high confidence as it's largely for BillAI developers
 			shellPromptInput: commandDetection?.executingCommand && promptInputModel
 				? promptInputModel.getCombinedString(true) + nonTaskSpinner
 				: promptInputModel?.getCombinedString(true),

@@ -254,6 +254,7 @@ export class BrowserTitlebarPart extends Part implements ITitlebarPart {
 
 	protected dragRegion: HTMLElement | undefined;
 	private title!: HTMLElement;
+	private intellijCommandCenterElement: HTMLElement | undefined;
 
 	private leftContent!: HTMLElement;
 	private centerContent!: HTMLElement;
@@ -565,6 +566,10 @@ export class BrowserTitlebarPart extends Part implements ITitlebarPart {
 
 	private createTitle(): void {
 		this.titleDisposables.clear();
+		if (this.intellijCommandCenterElement) {
+			this.intellijCommandCenterElement.remove();
+			this.intellijCommandCenterElement = undefined;
+		}
 
 		const isShowingTitleInNativeTitlebar = hasNativeTitlebar(this.configurationService, this.titleBarStyle);
 
@@ -590,7 +595,28 @@ export class BrowserTitlebarPart extends Part implements ITitlebarPart {
 			for (const registration of CommandCenterControlRegistry.getRegistrations()) {
 				if (this.contextKeyService.getContextKeyValue<boolean>(registration.contextKey)) {
 					const control = registration.create(this.instantiationService);
-					reset(this.title, control.element);
+					if (control.element.classList.contains('intellij-command-center')) {
+						reset(this.title);
+						if (this.rightContent) {
+							const anchor = this.windowControlsContainer ?? this.actionToolBarElement;
+							if (anchor) {
+								this.rightContent.insertBefore(control.element, anchor);
+							} else {
+								this.rightContent.appendChild(control.element);
+							}
+						}
+						this.intellijCommandCenterElement = control.element;
+						this.titleDisposables.add({
+							dispose: () => {
+								if (this.intellijCommandCenterElement === control.element) {
+									this.intellijCommandCenterElement = undefined;
+								}
+								control.element.remove();
+							}
+						});
+					} else {
+						reset(this.title, control.element);
+					}
 					this.titleDisposables.add(control);
 					customControlShown = true;
 					break;
@@ -890,7 +916,7 @@ export class BrowserTitlebarPart extends Part implements ITitlebarPart {
 			this.customMenubar.value.layout(menubarDimension);
 		}
 
-		const hasCenter = this.isCommandCenterVisible || this.title.textContent !== '';
+		const hasCenter = this.title.hasChildNodes() || this.title.textContent !== '';
 		this.rootContainer.classList.toggle('has-center', hasCenter);
 	}
 

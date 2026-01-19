@@ -136,7 +136,7 @@ export class GithubRemoteSourceProvider implements RemoteSourceProvider {
 				env.openExternal(Uri.parse(link));
 			}
 		}, {
-			label: l10n.t('Checkout on vscode.dev'),
+			label: l10n.t('Checkout on billai.dev'),
 			icon: 'globe',
 			run(branch: string) {
 				const link = getBranchLink(url, branch, getVscodeDevHost());

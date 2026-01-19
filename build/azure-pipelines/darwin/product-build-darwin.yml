@@ -53,21 +53,21 @@ jobs:
           artifactName: vscode_client_darwin_$(VSCODE_ARCH)_archive
           displayName: Publish client archive
           sbomBuildDropPath: $(Build.ArtifactStagingDirectory)/VSCode-darwin-$(VSCODE_ARCH)
-          sbomPackageName: "VS Code macOS $(VSCODE_ARCH)"
+          sbomPackageName: "BillAI macOS $(VSCODE_ARCH)"
           sbomPackageVersion: $(Build.SourceVersion)
         - output: pipelineArtifact
           targetPath: $(Build.ArtifactStagingDirectory)/out/vscode_server_darwin_$(VSCODE_ARCH)_archive/vscode-server-darwin-$(VSCODE_ARCH).zip
           artifactName: vscode_server_darwin_$(VSCODE_ARCH)_archive-unsigned
           displayName: Publish server archive
           sbomBuildDropPath: $(Agent.BuildDirectory)/vscode-server-darwin-$(VSCODE_ARCH)
-          sbomPackageName: "VS Code macOS $(VSCODE_ARCH) Server"
+          sbomPackageName: "BillAI macOS $(VSCODE_ARCH) Server"
           sbomPackageVersion: $(Build.SourceVersion)
         - output: pipelineArtifact
           targetPath: $(Build.ArtifactStagingDirectory)/out/vscode_web_darwin_$(VSCODE_ARCH)_archive/vscode-server-darwin-$(VSCODE_ARCH)-web.zip
           artifactName: vscode_web_darwin_$(VSCODE_ARCH)_archive-unsigned
           displayName: Publish web server archive
           sbomBuildDropPath: $(Agent.BuildDirectory)/vscode-server-darwin-$(VSCODE_ARCH)-web
-          sbomPackageName: "VS Code macOS $(VSCODE_ARCH) Web"
+          sbomPackageName: "BillAI macOS $(VSCODE_ARCH) Web"
           sbomPackageVersion: $(Build.SourceVersion)
     steps:
       - template: ./steps/product-build-darwin-compile.yml@self

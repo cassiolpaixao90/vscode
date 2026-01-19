@@ -78,7 +78,7 @@ parameters:
     type: boolean
     default: true
   - name: VSCODE_PUBLISH
-    displayName: "Publish to builds.code.visualstudio.com"
+    displayName: "Publish to builds.billai.dev"
     type: boolean
     default: true
   - name: VSCODE_RELEASE
@@ -155,7 +155,7 @@ name: "$(Date:yyyyMMdd).$(Rev:r) (${{ parameters.VSCODE_QUALITY }})"
 resources:
   pipelines:
     - pipeline: vscode-7pm-kick-off
-      source: 'VS Code 7PM Kick-Off'
+      source: 'BillAI 7PM Kick-Off'
       trigger: true
   repositories:
     - repository: 1ESPipelines

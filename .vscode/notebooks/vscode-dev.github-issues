@@ -7,7 +7,7 @@
   {
     "kind": 1,
     "language": "markdown",
-    "value": "# vscode.dev repo"
+    "value": "# billai.dev repo"
   },
   {
     "kind": 2,
@@ -22,12 +22,12 @@
   {
     "kind": 1,
     "language": "markdown",
-    "value": "# VS Code repo"
+    "value": "# BillAI repo"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode label:vscode.dev is:open"
+    "value": "repo:microsoft/vscode label:billai.dev is:open"
   },
   {
     "kind": 1,

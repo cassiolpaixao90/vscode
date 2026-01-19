@@ -592,7 +592,7 @@ export class MainThreadAuthentication extends Disposable implements MainThreadAu
 	}
 
 	async $promptForClientRegistration(authorizationServerUrl: string): Promise<{ clientId: string; clientSecret?: string } | undefined> {
-		const redirectUrls = 'http://127.0.0.1:33418\nhttps://vscode.dev/redirect';
+		const redirectUrls = 'http://127.0.0.1:33418\nhttps://billai.dev/redirect';
 
 		// Show modal dialog first to explain the situation and get user consent
 		const result = await this.dialogService.prompt({
@@ -626,7 +626,7 @@ export class MainThreadAuthentication extends Disposable implements MainThreadAu
 
 		const clientId = await this.quickInputService.input({
 			title: sharedTitle,
-			prompt: nls.localize('clientIdPrompt', "Enter an existing client ID that has been registered with the following redirect URIs: http://127.0.0.1:33418, https://vscode.dev/redirect"),
+			prompt: nls.localize('clientIdPrompt', "Enter an existing client ID that has been registered with the following redirect URIs: http://127.0.0.1:33418, https://billai.dev/redirect"),
 			placeHolder: nls.localize('clientIdPlaceholder', "OAuth client ID (azye39d...)"),
 			ignoreFocusLost: true,
 			validateInput: async (value: string) => {

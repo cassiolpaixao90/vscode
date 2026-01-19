@@ -783,7 +783,7 @@ export class RunInTerminalTool extends Disposable implements IToolImpl {
 			try {
 				const strategy: ITerminalExecuteStrategy = this._getExecuteStrategy(toolTerminal.shellIntegrationQuality, toolTerminal, commandDetection!);
 				if (toolTerminal.shellIntegrationQuality === ShellIntegrationQuality.None) {
-					toolResultMessage = '$(info) Enable [shell integration](https://code.visualstudio.com/docs/terminal/shell-integration) to improve command detection';
+					toolResultMessage = '$(info) Enable [shell integration](https://billai.dev/docs/terminal/shell-integration) to improve command detection';
 				}
 				this._logService.debug(`RunInTerminalTool: Using \`${strategy.type}\` execute strategy for command \`${command}\``);
 				store.add(strategy.onDidCreateStartMarker(startMarker => {

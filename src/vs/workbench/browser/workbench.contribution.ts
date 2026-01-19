@@ -79,6 +79,11 @@ const registry = Registry.as<IConfigurationRegistry>(ConfigurationExtensions.Con
 				'markdownDescription': localize('editorActionsLocation', "Controls where the editor actions are shown."),
 				'default': 'default'
 			},
+			'workbench.titleBar.intellijToolbar': {
+				'type': 'boolean',
+				'default': true,
+				'markdownDescription': localize({ key: 'workbench.titleBar.intellijToolbar', comment: ['{0} will be a setting name rendered as a link'] }, "Show IntelliJ-style run controls in the title bar when {0} is enabled.", '`#window.commandCenter#`')
+			},
 			'workbench.editor.alwaysShowEditorActions': {
 				'type': 'boolean',
 				'markdownDescription': localize('alwaysShowEditorActions', "Controls whether to always show the editor actions, even when the editor group is not active."),
@@ -729,7 +734,7 @@ const registry = Registry.as<IConfigurationRegistry>(ConfigurationExtensions.Con
 		localize('rootNameShort', "`${rootNameShort}`: shortened name of the workspace without suffixes (e.g. myFolder, myRemoteFolder or myWorkspace)."),
 		localize('rootPath', "`${rootPath}`: file path of the opened workspace or folder (e.g. /Users/Development/myWorkspace)."),
 		localize('profileName', "`${profileName}`: name of the profile in which the workspace is opened (e.g. Data Science (Profile)). Ignored if default profile is used."),
-		localize('appName', "`${appName}`: e.g. VS Code."),
+		localize('appName', "`${appName}`: e.g. BillAI."),
 		localize('remoteName', "`${remoteName}`: e.g. SSH"),
 		localize('dirty', "`${dirty}`: an indicator for when the active editor has unsaved changes."),
 		localize('focusedView', "`${focusedView}`: the name of the view that is currently focused."),

@@ -200,7 +200,7 @@ export function getCommitLink(url: string, hash: string, hostPrefix: string = 'h
 }
 
 export function getVscodeDevHost(): string {
-	return `https://${vscode.env.appName.toLowerCase().includes('insiders') ? 'insiders.' : ''}vscode.dev/github`;
+	return `https://${vscode.env.appName.toLowerCase().includes('insiders') ? 'insiders.' : ''}billai.dev/github`;
 }
 
 export async function ensurePublished(repository: Repository, file: vscode.Uri) {

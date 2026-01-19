@@ -80,7 +80,7 @@ export class SessionTypePickerActionItem extends ChatInputPickerActionViewItem {
 
 		const actionBarActions: IAction[] = [];
 
-		const learnMoreUrl = 'https://code.visualstudio.com/docs/copilot/agents/overview';
+		const learnMoreUrl = 'https://billai.dev/docs/copilot/agents/overview';
 		actionBarActions.push({
 			id: 'workbench.action.chat.agentOverview.learnMore',
 			label: localize('chat.learnMore', "Learn about agent types..."),

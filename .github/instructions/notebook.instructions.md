@@ -1,10 +1,10 @@
 ---
-description: Architecture documentation for VS Code notebook and interactive window components
+description: Architecture documentation for BillAI notebook and interactive window components
 ---
 
 # Notebook Architecture
 
-This document describes the internal architecture of VS Code's notebook implementation.
+This document describes the internal architecture of BillAI's notebook implementation.
 
 ## Model resolution
 

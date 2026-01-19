@@ -937,42 +937,44 @@ const defaultChat = {
 };
 
 // Add next to the command center if command center is disabled
-MenuRegistry.appendMenuItem(MenuId.CommandCenter, {
-	submenu: MenuId.ChatTitleBarMenu,
-	title: localize('title4', "Chat"),
-	icon: Codicon.chatSparkle,
-	when: ContextKeyExpr.and(
-		ChatContextKeys.supported,
-		ContextKeyExpr.and(
-			ChatContextKeys.Setup.hidden.negate(),
-			ChatContextKeys.Setup.disabled.negate()
+	MenuRegistry.appendMenuItem(MenuId.CommandCenter, {
+		submenu: MenuId.ChatTitleBarMenu,
+		title: localize('title4', "Chat"),
+		icon: Codicon.chatSparkle,
+		when: ContextKeyExpr.and(
+			ChatContextKeys.supported,
+			ContextKeyExpr.and(
+				ChatContextKeys.Setup.hidden.negate(),
+				ChatContextKeys.Setup.disabled.negate()
+			),
+			ContextKeyExpr.has('config.chat.commandCenter.enabled'),
+			ContextKeyExpr.equals('config.workbench.titleBar.intellijToolbar', false),
+			ContextKeyExpr.or(
+				ContextKeyExpr.has(`config.${ChatConfiguration.AgentStatusEnabled}`).negate(), // Show when agent status is disabled
+				ChatContextKeys.agentStatusHasNotifications.negate() // Or when agent status has no notifications
+			)
 		),
-		ContextKeyExpr.has('config.chat.commandCenter.enabled'),
-		ContextKeyExpr.or(
-			ContextKeyExpr.has(`config.${ChatConfiguration.AgentStatusEnabled}`).negate(), // Show when agent status is disabled
-			ChatContextKeys.agentStatusHasNotifications.negate() // Or when agent status has no notifications
-		)
-	),
-	order: 10003 // to the right of agent controls
+		order: 10003 // to the right of agent controls
 });
 
 // Add to the global title bar if command center is disabled
-MenuRegistry.appendMenuItem(MenuId.TitleBar, {
-	submenu: MenuId.ChatTitleBarMenu,
-	title: localize('title4', "Chat"),
-	group: 'navigation',
-	icon: Codicon.chatSparkle,
-	when: ContextKeyExpr.and(
-		ChatContextKeys.supported,
-		ContextKeyExpr.and(
-			ChatContextKeys.Setup.hidden.negate(),
-			ChatContextKeys.Setup.disabled.negate()
+	MenuRegistry.appendMenuItem(MenuId.TitleBar, {
+		submenu: MenuId.ChatTitleBarMenu,
+		title: localize('title4', "Chat"),
+		group: 'navigation',
+		icon: Codicon.chatSparkle,
+		when: ContextKeyExpr.and(
+			ChatContextKeys.supported,
+			ContextKeyExpr.and(
+				ChatContextKeys.Setup.hidden.negate(),
+				ChatContextKeys.Setup.disabled.negate()
+			),
+			ContextKeyExpr.has('config.chat.commandCenter.enabled'),
+			ContextKeyExpr.equals('config.workbench.titleBar.intellijToolbar', false),
+			ContextKeyExpr.has('config.window.commandCenter').negate(),
 		),
-		ContextKeyExpr.has('config.chat.commandCenter.enabled'),
-		ContextKeyExpr.has('config.window.commandCenter').negate(),
-	),
-	order: 1
-});
+		order: 1
+	});
 
 registerAction2(class ToggleCopilotControl extends ToggleTitleBarConfigAction {
 	constructor() {

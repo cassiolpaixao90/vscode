@@ -212,7 +212,7 @@ export interface Hover {
 
 /**
  * The hover provider interface defines the contract between extensions and
- * the [hover](https://code.visualstudio.com/docs/editor/intellisense)-feature.
+ * the [hover](https://billai.dev/docs/editor/intellisense)-feature.
  */
 export interface HoverProvider<THover = Hover> {
 	/**
@@ -702,7 +702,7 @@ export interface CompletionContext {
 }
 /**
  * The completion item provider interface defines the contract between extensions and
- * the [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense).
+ * the [IntelliSense](https://billai.dev/docs/editor/intellisense).
  *
  * When computing *complete* completion items is expensive, providers can optionally implement
  * the `resolveCompletionItem`-function. In that case it is enough to return completion
@@ -1156,7 +1156,7 @@ export interface CodeActionList extends IDisposable {
 
 /**
  * The code action interface defines the contract between extensions and
- * the [light bulb](https://code.visualstudio.com/docs/editor/editingevolved#_code-action) feature.
+ * the [light bulb](https://billai.dev/docs/editor/editingevolved#_code-action) feature.
  * @internal
  */
 export interface CodeActionProvider {
@@ -1322,7 +1322,7 @@ export interface SignatureHelpContext {
 
 /**
  * The signature help provider interface defines the contract between extensions and
- * the [parameter hints](https://code.visualstudio.com/docs/editor/intellisense)-feature.
+ * the [parameter hints](https://billai.dev/docs/editor/intellisense)-feature.
  */
 export interface SignatureHelpProvider {
 
@@ -1458,7 +1458,7 @@ export interface ReferenceContext {
 }
 /**
  * The reference provider interface defines the contract between extensions and
- * the [find references](https://code.visualstudio.com/docs/editor/editingevolved#_peek)-feature.
+ * the [find references](https://billai.dev/docs/editor/editingevolved#_peek)-feature.
  */
 export interface ReferenceProvider {
 	/**
@@ -1529,7 +1529,7 @@ export type Definition = Location | Location[] | LocationLink[];
 
 /**
  * The definition provider interface defines the contract between extensions and
- * the [go to definition](https://code.visualstudio.com/docs/editor/editingevolved#_go-to-definition)
+ * the [go to definition](https://billai.dev/docs/editor/editingevolved#_go-to-definition)
  * and peek definition features.
  */
 export interface DefinitionProvider {
@@ -1541,7 +1541,7 @@ export interface DefinitionProvider {
 
 /**
  * The definition provider interface defines the contract between extensions and
- * the [go to definition](https://code.visualstudio.com/docs/editor/editingevolved#_go-to-definition)
+ * the [go to definition](https://billai.dev/docs/editor/editingevolved#_go-to-definition)
  * and peek definition features.
  */
 export interface DeclarationProvider {
@@ -1745,7 +1745,7 @@ export interface DocumentSymbol {
 
 /**
  * The document symbol provider interface defines the contract between extensions and
- * the [go to symbol](https://code.visualstudio.com/docs/editor/editingevolved#_go-to-symbol)-feature.
+ * the [go to symbol](https://billai.dev/docs/editor/editingevolved#_go-to-symbol)-feature.
  */
 export interface DocumentSymbolProvider {
 

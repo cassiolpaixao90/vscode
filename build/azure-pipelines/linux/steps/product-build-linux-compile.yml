@@ -192,7 +192,7 @@ steps:
         artifact: $(ARTIFACT_PREFIX)vscode_cli_linux_$(VSCODE_ARCH)_cli
         patterns: "**"
         path: $(Build.ArtifactStagingDirectory)/cli
-      displayName: Download VS Code CLI
+      displayName: Download BillAI CLI
 
     - script: |
         set -e

@@ -143,13 +143,13 @@ else {
 	quality = parseQuality();
 }
 
-logger.log(`VS Code product quality: ${quality}.`);
+logger.log(`BillAI product quality: ${quality}.`);
 
 async function ensureStableCode(): Promise<void> {
 	let stableCodePath = opts['stable-build'];
 	if (!stableCodePath) {
 		const current = parseVersion(version!);
-		const versionsReq = await retry(() => measureAndLog(() => fetch('https://update.code.visualstudio.com/api/releases/stable'), 'versionReq', logger), 1000, 20);
+		const versionsReq = await retry(() => measureAndLog(() => fetch('https://updates.billai.dev/api/releases/stable'), 'versionReq', logger), 1000, 20);
 
 		if (!versionsReq.ok) {
 			throw new Error('Could not fetch releases from update server');
@@ -165,7 +165,7 @@ async function ensureStableCode(): Promise<void> {
 			throw new Error(`Could not find suitable stable version for ${version}`);
 		}
 
-		logger.log(`Found VS Code v${version}, downloading previous VS Code version ${stableVersion}...`);
+		logger.log(`Found BillAI v${version}, downloading previous BillAI version ${stableVersion}...`);
 
 		let lastProgressMessage: string | undefined = undefined;
 		let lastProgressReportedAt = 0;
@@ -202,7 +202,7 @@ async function ensureStableCode(): Promise<void> {
 		}));
 
 		if (process.platform === 'darwin') {
-			// Visual Studio Code.app/Contents/MacOS/Electron
+			// BillAI.app/Contents/MacOS/Electron
 			stableCodePath = path.dirname(path.dirname(path.dirname(stableCodeExecutable)));
 		} else {
 			// VSCode/Code.exe (Windows) | VSCode/code (Linux)

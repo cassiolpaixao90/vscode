@@ -27,7 +27,7 @@ export function isSupportedEnvironment(uri: Uri): boolean {
 	}
 
 	return (
-		// vscode.dev & insiders.vscode.dev
+		// billai.dev & insiders.billai.dev
 		/(?:^|\.)vscode\.dev$/.test(uri.authority) ||
 		// github.dev & codespaces
 		/(?:^|\.)github\.dev$/.test(uri.authority) ||

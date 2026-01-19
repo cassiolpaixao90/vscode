@@ -8,11 +8,11 @@ export const OtherToolsView = () => {
 				<Stack.Item>
 					<List
 						items={[
-							{ name: 'VS Code Standup (Redomond)', href: 'https://vscode-standup.azurewebsites.net' },
-							{ name: 'VS Code Standup (Zurich)', href: 'http://stand.azurewebsites.net/' },
+							{ name: 'BillAI Standup (Redomond)', href: 'https://vscode-standup.azurewebsites.net' },
+							{ name: 'BillAI Standup (Zurich)', href: 'http://stand.azurewebsites.net/' },
 							{},
-							{ name: 'VS Code Errors', href: 'https://vscode-errors.azurewebsites.net' },
-							{ name: 'VS Code GDPR', href: 'https://github.com/microsoft/vscode-gdpr-tooling' },
+							{ name: 'BillAI Errors', href: 'https://vscode-errors.azurewebsites.net' },
+							{ name: 'BillAI GDPR', href: 'https://github.com/microsoft/vscode-gdpr-tooling' },
 						]}
 						onRenderCell={(item) => {
 							if (!item?.name) {

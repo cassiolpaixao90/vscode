@@ -78,7 +78,7 @@ interface IFlowTriggerOptions {
 	 */
 	extraAuthorizeParameters?: Record<string, string>;
 	/**
-	 * The Uri that the OAuth flow will redirect to. (i.e. vscode.dev/redirect)
+	 * The Uri that the OAuth flow will redirect to. (i.e. billai.dev/redirect)
 	 */
 	redirectUri: Uri;
 	/**
